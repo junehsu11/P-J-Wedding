@@ -9,7 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Noto+Serif+TC:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 :root{
-  --sage:#95A098; --stone:#C4C1BC; --sand:#C5BDB2;
+  --sage:#95A098;
+  --stone:#C4C1BC; --sand:#C5BDB2;
   --ink:#353a37; --paper:#f8f7f4; --white:#fff;
   --line:rgba(53,58,55,.16); --shadow:0 18px 50px rgba(53,58,55,.12);
 }
@@ -107,7 +108,7 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
  .form-wrap{padding:24px 18px;border-radius:22px}
 }
 
-/* RSVP form styles merged from the second HTML */
+/* RSVP form styles */
 .rsvp-form-card .required{color:#8a7669;font-size:12px;margin-left:4px}
 .rsvp-form-card .field{margin-bottom:24px}
 .rsvp-form-card input,
@@ -135,6 +136,7 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
   margin:0;padding:13px 15px;border:1px solid #D8D4CE;
   border-radius:13px;background:rgba(255,255,255,.94);
   cursor:pointer;transition:.2s ease;
+  display:block;
 }
 .rsvp-form-card .choice input:checked + label{
   border-color:var(--sage);
@@ -185,25 +187,16 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
   .rsvp-form-card textarea{font-size:16px}
 }
 
-
-/* Hero title adjustment */
-.hero-card{
-  margin-top:150px;
-}
-.names{
-  font-size:clamp(42px,6vw,78px);
-}
+.hero-card{margin-top:150px}
+.names{font-size:clamp(42px,6vw,78px)}
 @media(max-width:700px){
-  .hero-card{
-    margin-top:120px;
-  }
-  .names{
-    font-size:44px;
-  }
+  .hero-card{margin-top:120px}
+  .names{font-size:44px}
 }
-
 </style>
-<script src="/_sdk/a6de989e8af05ea5.resizing_sdk.js" integrity="sha512-cceAQMIleYr/3eg7o5WzN46w0HpgI1sxi+5kDUb7CmTjHEpgBtINDxtOpnNeUtujjui8NG0OSDgUMl0/E2lT2A=="></script><script src="/_sdk/b3bf9e8ac58e6ad6.data_sdk.js" integrity="sha512-otc1u9NYq9Ms5Jt//7vmhrrqR5CLPr8Jdgs6741gqniClfLMcfmC+jK/cKuQdhLv6G0esJ/FzaMS9tv0T/vj/Q=="></script></head>
+<script src="/_sdk/a6de989e8af05ea5.resizing_sdk.js" integrity="sha512-cceAQMIleYr/3eg7o5WzN46w0HpgI1sxi+5kDUb7CmTjHEpgBtINDxtOpnNeUtujjui8NG0OSDgUMl0/E2lT2A=="></script>
+<script src="/_sdk/b3bf9e8ac58e6ad6.data_sdk.js" integrity="sha512-otc1u9NYq9Ms5Jt//7vmhrrqR5CLPr8Jdgs6741gqniClfLMcfmC+jK/cKuQdhLv6G0esJ/FzaMS9tv0T/vj/Q=="></script>
+</head>
 <body data-html-import-id="html-import-0" data-template-id="__page-root" style="background: rgb(248, 247, 244);">
 <nav class="nav canva-menu" data-html-import-id="html-import-1" data-template-id="nav-0" style="background: rgba(255, 255, 255, 0.56);">
   <a class="brand canva-link" href="#home" data-html-import-id="html-import-2" data-template-id="a-1" style="color: rgb(53, 58, 55); font-family: &quot;Cormorant Garamond&quot;; font-size: 22px;">P &amp; J</a>
@@ -226,8 +219,7 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
  <div class="section-inner intro" data-html-import-id="html-import-15">
   <div class="eyebrow canva-container" data-html-import-id="html-import-16" data-template-id="div-10" style="color: rgb(105, 114, 109); font-family: &quot;Cormorant Garamond&quot;; font-size: 16px;">Our Story</div>
   <h2 data-html-import-id="html-import-17" data-template-id="h2-11" class="canva-text" style="color: rgb(53, 58, 55); font-family: &quot;Cormorant Garamond&quot;; font-weight: 500; font-size: 64px;">光育平 Paul &amp; 徐子珺 June</h2>
-  <p data-html-import-id="html-import-18" data-template-id="p-12" class="canva-text" style="color: rgb(92, 98, 94);">我們想把這一天，留給最重要的人。
-誠摯邀請您與我們一起見證這份幸福，分享一場溫柔而珍貴的相聚。</p>
+  <p data-html-import-id="html-import-18" data-template-id="p-12" class="canva-text" style="color: rgb(92, 98, 94);">我們想把這一天，留給最重要的人。誠摯邀請您與我們一起見證這份幸福，分享一場溫柔而珍貴的相聚。</p>
   <div class="countdown" aria-label="Wedding countdown" data-html-import-id="html-import-20">
    <div class="time-card canva-container" data-html-import-id="html-import-21" data-template-id="div-13" style="background: rgba(255, 255, 255, 0.94);"><span class="num canva-text" id="days" data-html-import-id="html-import-22" data-template-id="span-14" style="color: rgb(53, 58, 55); font-family: &quot;Cormorant Garamond&quot;; font-weight: 500; font-size: 52px;">154</span><span class="divider canva-text" data-html-import-id="html-import-23" data-template-id="span-15" style="background: rgba(53, 58, 55, 0.2);"></span><span class="unit canva-text" data-html-import-id="html-import-24" data-template-id="span-16" style="color: rgb(115, 122, 118); font-size: 12px;">DAYS</span></div>
    <div class="time-card canva-container" data-html-import-id="html-import-25" data-template-id="div-17" style="background: rgba(255, 255, 255, 0.94);"><span class="num canva-text" id="hours" data-html-import-id="html-import-26" data-template-id="span-18" style="color: rgb(53, 58, 55); font-family: &quot;Cormorant Garamond&quot;; font-weight: 500; font-size: 52px;">16</span><span class="divider canva-text" data-html-import-id="html-import-27" data-template-id="span-19" style="background: rgba(53, 58, 55, 0.2);"></span><span class="unit canva-text" data-html-import-id="html-import-28" data-template-id="span-20" style="color: rgb(115, 122, 118); font-size: 12px;">HOURS</span></div>
@@ -273,7 +265,6 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
  </div>
 </section>
 
-
 <section id="rsvp">
  <div class="section-inner">
   <div class="eyebrow">Répondez s'il vous plaît</div>
@@ -284,16 +275,14 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
       name="hiddenSubmitFrame"
       id="hiddenSubmitFrame"
       title="Google Forms hidden submission frame"
-      style="display:none"
-      aria-hidden="true"></iframe>
+      style="display:none"></iframe>
 
     <form
       id="rsvpForm"
       action="https://docs.google.com/forms/d/e/1FAIpQLSfseN1sDdX2hBgmCGGSRqaAiA7R63-V4BhCTkNZWq3u1_tOzQ/formResponse"
       method="POST"
       target="hiddenSubmitFrame"
-      accept-charset="UTF-8"
-      novalidate>
+      accept-charset="UTF-8">
 
       <div class="field">
         <label for="rsvpName">姓名 NAME <span class="required">*</span></label>
@@ -344,7 +333,6 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
           <option value="" selected disabled>請選擇</option>
           <option value="1人">1人</option>
           <option value="2人">2人</option>
-          
         </select>
         <span class="hint">僅男方親友需要填寫出席人數，最多 2 人。</span>
       </div>
@@ -363,11 +351,9 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
         <textarea id="message" name="entry.964151102" autocomplete="off"></textarea>
       </div>
 
-      <button id="submitBtn" class="submit" type="submit">送出回函　SUBMIT RSVP</button>
+      <button id="submitBtn" class="submit" type="submit">送出回函 SUBMIT RSVP</button>
 
-      <p class="note">
-        感謝您的回覆，我們期待與您一起分享這個重要的日子。
-      </p>
+      <p class="note">感謝您的回覆，我們期待與您一起分享這個重要的日子。</p>
     </form>
 
     <div class="success" id="successMessage" aria-live="polite">
@@ -385,7 +371,6 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
  <div class="footer-names canva-container" data-html-import-id="html-import-119" data-template-id="div-109" style="color: rgb(53, 58, 55); font-family: &quot;Cormorant Garamond&quot;; font-size: 32px;">Paul &amp; June</div>
  <div data-html-import-id="html-import-120" data-template-id="div-110" class="canva-container" style="color: rgb(53, 58, 55);">31 January 2027 · Taipei</div>
 </footer>
-
 
 <script>
 /* Wedding countdown */
@@ -418,13 +403,14 @@ document.querySelectorAll(".acc button").forEach(btn=>{
   });
 });
 
-/* RSVP: show guest count only for groom's friends */
+/* RSVP Logic */
 const rsvpForm=document.getElementById("rsvpForm");
 const relationship=document.getElementById("relationship");
 const attendanceCountWrap=document.getElementById("attendanceCountWrap");
 const attendanceCount=document.getElementById("attendanceCount");
 const submitBtn=document.getElementById("submitBtn");
 const successMessage=document.getElementById("successMessage");
+const iframe=document.getElementById("hiddenSubmitFrame");
 
 function syncGuestLogic(){
   const show=relationship.value==="男方親友";
@@ -444,40 +430,26 @@ function syncGuestLogic(){
 relationship.addEventListener("change",syncGuestLogic);
 syncGuestLogic();
 
-let submitted=false;
+let submitted = false;
 
-rsvpForm.addEventListener("submit",function(event){
-  event.preventDefault();
+rsvpForm.addEventListener("submit", function(){
+  submitted = true;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "送出中⋯";
+});
 
-  if(!rsvpForm.checkValidity()){
-    rsvpForm.reportValidity();
-    return;
-  }
-
-  if(submitted)return;
-
-  submitted=true;
-  submitBtn.disabled=true;
-  submitBtn.textContent="送出中⋯";
-
-  /* Submit to Google Forms through the hidden iframe. */
-  HTMLFormElement.prototype.submit.call(rsvpForm);
-
-  /*
-    Google Forms is cross-origin, so its response cannot be read by JS.
-    Show the confirmation after a short delay while keeping the guest
-    on the wedding invitation page.
-  */
-  setTimeout(function(){
+iframe.addEventListener("load", function(){
+  if (submitted) {
     rsvpForm.classList.add("hidden");
     successMessage.classList.add("show");
     successMessage.scrollIntoView({
-      behavior:"smooth",
-      block:"center"
+      behavior: "smooth",
+      block: "center"
     });
-  },900);
+  }
 });
 </script>
 
-
-<script src="/_sdk/c6bcadf20ce5820f.editing_sdk.js" integrity="sha512-LVukVCTKnKSxy98w+wCVzDAxVXBG2vy32XblXlmJD9CPFnF2/FVc75CFngl41IdXcX3sVHJc9olw64zrPM/FIA=="></script></body></html>
+<script src="/_sdk/c6bcadf20ce5820f.editing_sdk.js" integrity="sha512-LVukVCTKnKSxy98w+wCVzDAxVXBG2vy32XblXlmJD9CPFnF2/FVc75CFngl41IdXcX3sVHJc9olw64zrPM/FIA=="></script>
+</body>
+</html>
