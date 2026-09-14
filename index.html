@@ -48,15 +48,46 @@ section{padding:105px 22px}
 h2{font-family:"Cormorant Garamond","Noto Serif TC",serif;font-size:clamp(40px,6vw,64px);font-weight:500;line-height:1;margin:8px 0 35px}
 .intro{text-align:center;max-width:760px;margin:auto}
 .intro p{color:#5c625e}
-.countdown{margin-top:46px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.time-card{
- background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.9);
- border-radius:20px;padding:25px 14px;box-shadow:0 14px 36px rgba(53,58,55,.13);
- display:grid;grid-template-columns:1fr 1px auto;align-items:center;min-height:112px;
+.countdown{
+  margin-top:46px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
 }
-.time-card .num{font-family:"Cormorant Garamond",serif;font-size:52px;line-height:1;font-weight:500;text-align:center}
-.time-card .divider{width:1px;height:44px;background:rgba(53,58,55,.2)}
-.time-card .unit{font-size:12px;letter-spacing:.12em;writing-mode:vertical-rl;color:#737a76;padding-left:10px}
+
+.time-card{
+  background:rgba(255,255,255,.94);
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:20px;
+  padding:20px 14px;
+  box-shadow:0 14px 36px rgba(53,58,55,.13);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:112px;
+}
+
+.time-card .unit{
+  order:1;
+  font-size:12px;
+  letter-spacing:.12em;
+  color:#737a76;
+  margin-bottom:5px;
+}
+
+.time-card .num{
+  order:2;
+  font-family:"Cormorant Garamond",serif;
+  font-size:52px;
+  line-height:1;
+  font-weight:500;
+  text-align:center;
+}
+
+.time-card .divider{
+  display:none;
+}
 .vcards{display:grid;gap:18px}
 .vcard{background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:24px;padding:28px 30px;box-shadow:var(--shadow)}
 .vcard .label{font-family:"Cormorant Garamond",serif;letter-spacing:.18em;color:#727a75;font-size:15px;text-transform:uppercase}
@@ -100,10 +131,21 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
  .names{font-size:52px}
  section{padding:78px 18px}
  .countdown{gap:8px}
- .time-card{padding:18px 7px;min-height:90px;border-radius:16px}
- .time-card .num{font-size:38px}
- .time-card .divider{height:35px}
- .time-card .unit{font-size:10px;padding-left:7px}
+
+.time-card{
+  padding:14px 5px;
+  min-height:88px;
+  border-radius:16px;
+}
+
+.time-card .num{
+  font-size:36px;
+}
+
+.time-card .unit{
+  font-size:9px;
+  margin-bottom:4px;
+}
  .vcard{padding:23px}
  .form-wrap{padding:24px 18px;border-radius:22px}
 }
