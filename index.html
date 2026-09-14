@@ -447,19 +447,26 @@ rsvpForm.addEventListener("submit", function(){
 });
 
 window.addEventListener("message", function(event) {
+  console.log("收到 RSVP message：", event.data);
+
   if (!event.data) return;
 
   if (event.data.type === "RSVP_SUCCESS") {
+    submitted = false;
+
     rsvpForm.classList.add("hidden");
     successMessage.classList.add("show");
     successMessage.scrollIntoView({
       behavior: "smooth",
       block: "center"
     });
+
+    return;
   }
 
   if (event.data.type === "RSVP_ERROR") {
     submitted = false;
+
     submitBtn.disabled = false;
     submitBtn.textContent = "送出回函 SUBMIT RSVP";
 
