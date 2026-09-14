@@ -446,12 +446,6 @@ rsvpForm.addEventListener("submit", function(){
   submitBtn.textContent = "送出中⋯";
 });
 
-rsvpForm.addEventListener("submit", function(){
-  submitted = true;
-  submitBtn.disabled = true;
-  submitBtn.textContent = "送出中⋯";
-});
-
 iframe.addEventListener("load", function(){
   if (submitted) {
     submitted = false;
