@@ -142,31 +142,77 @@ input:focus,select:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(149,
 footer{padding:50px 22px;text-align:center;background:#e7e4df}
 .footer-names{font-family:"Cormorant Garamond",serif;font-size:32px}
 @media(max-width:700px){
- .nav{top:10px;padding:10px 13px}
- .brand{font-size:17px}
- .navlinks{gap:11px;font-size:12px}
- .hero{min-height:92svh;background-position:54% center}
- .hero-card{margin-top:55px}
- .names{font-size:52px}
- section{padding:78px 18px}
- .countdown{gap:8px}
+  .nav{
+    top:10px;
+    padding:10px 13px;
+  }
 
-.time-card{
-  padding:14px 5px;
-  min-height:88px;
-  border-radius:16px;
-}
+  .brand{
+    font-size:17px;
+  }
 
-.time-card .num{
-  font-size:36px;
-}
+  .navlinks{
+    gap:11px;
+    font-size:12px;
+  }
 
-.time-card .unit{
-  font-size:9px;
-  margin-bottom:4px;
-}
- .vcard{padding:23px}
- .form-wrap{padding:24px 18px;border-radius:22px}
+  .hero{
+    min-height:92svh;
+    background-position:54% center;
+  }
+
+  .hero-card{
+    margin-top:55px;
+  }
+
+  .names{
+    font-size:52px;
+  }
+
+  section{
+    padding:70px 18px;
+  }
+
+  .countdown{
+    grid-template-columns:repeat(4,1fr);
+    gap:7px;
+    margin-top:32px;
+  }
+
+  .time-card{
+    padding:14px 4px;
+    min-height:82px;
+    border-radius:15px;
+  }
+
+  .time-card .num{
+    font-size:34px;
+  }
+
+  .time-card .unit{
+    font-size:9px;
+    margin-bottom:4px;
+    letter-spacing:.08em;
+  }
+
+  .vcard{
+    padding:23px 20px;
+    border-radius:20px;
+  }
+
+  .vcard h3{
+    font-size:22px;
+  }
+
+  .form-wrap{
+    padding:24px 18px;
+    border-radius:22px;
+  }
+
+  .color-swatches{
+    gap:9px !important;
+    margin-top:14px !important;
+  }
 }
 
 /* RSVP form styles */
