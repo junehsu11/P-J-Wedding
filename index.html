@@ -93,6 +93,25 @@ h2{font-family:"Cormorant Garamond","Noto Serif TC",serif;font-size:clamp(40px,6
 .vcard .label{font-family:"Cormorant Garamond",serif;letter-spacing:.18em;color:#727a75;font-size:15px;text-transform:uppercase}
 .vcard h3{font-size:24px;font-weight:600;margin:4px 0 8px}
 .vcard p{margin:4px 0;color:#5d625f}
+.color-swatches{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:16px;
+}
+
+.color-swatch{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:block;
+  border:1px solid rgba(53,58,55,.16);
+  box-sizing:border-box;
+}
+
+.color-swatch.white{
+  border:1px solid rgba(53,58,55,.28);
+}
 .pill{display:inline-block;padding:4px 11px;border-radius:999px;background:rgba(149,160,152,.16);font-size:13px}
 .accordion{margin-top:28px}
 .acc{border-top:1px solid var(--line)}
@@ -304,10 +323,18 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
     <p data-html-import-id="html-import-55" data-template-id="p-48" class="canva-text" style="color: rgb(93, 98, 95);">Grand Ballroom / 36F</p>
    </article>
    <article class="vcard" data-html-import-id="html-import-56" data-template-id="article-49" style="background: rgba(255, 255, 255, 0.7);">
-    <div class="label canva-container" data-html-import-id="html-import-57" data-template-id="div-50" style="color: rgb(114, 122, 117); font-family: &quot;Cormorant Garamond&quot;; font-size: 15px;">Dress Code</div>
-    <h3 data-html-import-id="html-import-58" data-template-id="h3-51" class="canva-text" style="color: rgb(53, 58, 55); font-weight: 600; font-size: 24px;">黑、白、大地色</h3>
-    <p data-html-import-id="html-import-59" data-template-id="p-52" class="canva-text" style="color: rgb(93, 98, 95);"><span class="pill canva-text" data-html-import-id="html-import-60" data-template-id="span-53" style="background: rgba(149, 160, 152, 0.16); color: rgb(93, 98, 95); font-size: 13px;">Black</span> <span class="pill canva-text" data-html-import-id="html-import-61" data-template-id="span-54" style="background: rgba(149, 160, 152, 0.16); color: rgb(93, 98, 95); font-size: 13px;">White</span> <span class="pill canva-text" data-html-import-id="html-import-62" data-template-id="span-55" style="background: rgba(149, 160, 152, 0.16); color: rgb(93, 98, 95); font-size: 13px;">Earth Tones</span></p>
-   </article>
+  <div class="label" style="color: rgb(114, 122, 117); font-family: &quot;Cormorant Garamond&quot;; font-size: 15px;">Dress Code</div>
+
+  <h3 style="color: rgb(53, 58, 55); font-weight: 600; font-size: 24px;">黑、白、大地色</h3>
+
+  <div class="color-swatches" aria-label="Dress Code colors">
+    <span class="color-swatch" style="background:#000000;"></span>
+    <span class="color-swatch white" style="background:#FFFFFF;"></span>
+    <span class="color-swatch" style="background:#95A098;"></span>
+    <span class="color-swatch" style="background:#C4C1BC;"></span>
+    <span class="color-swatch" style="background:#C5BDB2;"></span>
+  </div>
+</article>
   </div>
 
   <div class="accordion" aria-label="交通指引" data-html-import-id="html-import-63">
