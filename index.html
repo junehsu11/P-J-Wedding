@@ -493,6 +493,16 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
         </select>
       </div>
 
+      <div class="field" id="addressField" style="display:none;">
+        <label for="address">紙本喜帖寄送地址<span class="required">*</span></label>
+          <textarea
+              id="address"
+              name="address"
+              rows="3"
+          placeholder="請填寫完整收件地址"
+          ></textarea>
+      </div>
+
       <button id="submitBtn" class="submit" type="submit">送出回函 SUBMIT RSVP</button>
 
       <p class="note">感謝您的回覆，我們期待與您一起分享這個重要的日子。</p>
@@ -544,6 +554,24 @@ document.querySelectorAll(".acc button").forEach(btn=>{
     panel.style.maxHeight=open ? panel.scrollHeight+"px" : "0px";
   });
 });
+
+
+const ecardSelect = document.getElementById("ecard");
+const addressField = document.getElementById("addressField");
+const addressInput = document.getElementById("address");
+
+if (ecardSelect && addressField && addressInput) {
+  ecardSelect.addEventListener("change", function () {
+    if (this.value === "是") {
+      addressField.style.display = "block";
+      addressInput.required = true;
+    } else {
+      addressField.style.display = "none";
+      addressInput.required = false;
+      addressInput.value = "";
+    }
+  });
+}
 
 /* RSVP Logic */
 const rsvpForm=document.getElementById("rsvpForm");
