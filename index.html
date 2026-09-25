@@ -323,6 +323,11 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
 }
 .rsvp-form-card .success p{color:#737975;font-size:14px;margin:0}
 .rsvp-form-card .hidden{display:none!important}
+.rsvp-form-card .form-error{
+  display:none;margin-top:12px;text-align:center;
+  color:#a3564c;font-size:13px;line-height:1.6;
+}
+.rsvp-form-card .form-error.show{display:block}
 @media(max-width:700px){
   .rsvp-form-card{padding:24px 18px;border-radius:22px}
   .rsvp-form-card input,
@@ -609,6 +614,10 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
 
       <button id="submitBtn" class="submit" type="submit">送出回函 SUBMIT RSVP</button>
 
+      <p class="form-error" id="formError" role="alert" aria-live="assertive">
+        送出時發生問題，可能是網路不穩，請稍後再試一次。若持續無法送出，也歡迎直接與新人聯繫。
+      </p>
+
       <p class="note">感謝您的回覆，我們期待與您一起分享這個重要的日子。</p>
     </form>
 
@@ -755,15 +764,36 @@ syncGuestLogic();
 
 let submitted = false;
 
+const formError = document.getElementById("formError");
+let submitTimer = null;
+
+function resetSubmitButton(){
+  submitBtn.disabled = false;
+  submitBtn.textContent = "送出回函 SUBMIT RSVP";
+}
+
 rsvpForm.addEventListener("submit", function(){
   submitted = true;
+  formError.classList.remove("show");
   submitBtn.disabled = true;
   submitBtn.textContent = "送出中⋯";
+
+  // 逾時保護：10 秒內 iframe 未回應則視為送出失敗
+  clearTimeout(submitTimer);
+  submitTimer = setTimeout(function(){
+    if (submitted) {
+      submitted = false;
+      resetSubmitButton();
+      formError.classList.add("show");
+      formError.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, 10000);
 });
 
 iframe.addEventListener("load", function(){
   if (submitted) {
     submitted = false;
+    clearTimeout(submitTimer);
 
     rsvpForm.classList.add("hidden");
     successMessage.classList.add("show");
