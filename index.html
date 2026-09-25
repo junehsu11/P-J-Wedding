@@ -327,6 +327,11 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
 .rsvp-form-card .submit:hover{opacity:.9}
 .rsvp-form-card .submit:disabled{opacity:.65;cursor:wait}
 .rsvp-form-card .hint{display:block;margin-top:5px;color:#888e8a;font-size:12px}
+.rsvp-form-card .deadline-note{
+  margin:0 0 14px;text-align:center;
+  color:#888e8a;font-size:13px;line-height:1.7;
+}
+.rsvp-form-card .deadline-note strong{font-weight:400;color:#888e8a}
 .rsvp-form-card .success{
   display:none;text-align:center;padding:28px 10px 10px;
 }
@@ -643,6 +648,8 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
           ></textarea>
       </div>
 
+      <p class="deadline-note">請於 <strong>2026 / 11 / 8（週日）</strong> 前回覆，方便我們準備當日席位，謝謝您。</p>
+
       <button id="submitBtn" class="submit" type="submit">送出回函 SUBMIT RSVP</button>
 
       <p class="form-error" id="formError" role="alert" aria-live="assertive">
@@ -875,6 +882,7 @@ iframe.addEventListener("load", function(){
 <script src="/_sdk/c6bcadf20ce5820f.editing_sdk.js" integrity="sha512-LVukVCTKnKSxy98w+wCVzDAxVXBG2vy32XblXlmJD9CPFnF2/FVc75CFngl41IdXcX3sVHJc9olw64zrPM/FIA=="></script>
 </body>
 </html>
+
 
 
 
