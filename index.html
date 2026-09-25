@@ -122,6 +122,8 @@ h2{font-family:"Cormorant Garamond","Noto Serif TC",serif;font-size:clamp(40px,6
 }
 .map-btn:hover{background:var(--sage);color:#fff}
 .map-btn svg{width:15px;height:15px;flex:none}
+.cal-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.cal-btns .map-btn{margin-top:0}
 .pill{display:inline-block;padding:4px 11px;border-radius:999px;background:rgba(149,160,152,.16);font-size:13px}
 .accordion{margin-top:28px}
 .acc{border-top:1px solid var(--line)}
@@ -488,10 +490,16 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
       <h3 data-html-import-id="html-import-44" data-template-id="h3-33" class="canva-text" style="color: rgb(53, 58, 55); font-weight: 600; font-size: 24px;">2027.01.31 Sunday</h3>
       <p data-html-import-id="html-import-46" data-template-id="p-35" class="canva-text" style="color: rgb(93, 98, 95);">11:00-12:00 迎賓酒會</p>
       <p data-html-import-id="html-import-47" data-template-id="p-36" class="canva-text" style="color: rgb(93, 98, 95);">12:00 入席・12:30 午宴</p>
-      <button type="button" class="map-btn" id="addCalBtn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-        加入行事曆
-      </button>
+      <div class="cal-btns">
+        <button type="button" class="map-btn" id="addCalBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Apple 行事曆
+        </button>
+        <a class="map-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Paul%20%26%20June%20%E5%A9%9A%E7%A6%AE&dates=20270131T030000Z%2F20270131T063000Z&location=%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97%2036F%20%E5%AF%B0%E5%AE%87%E5%BB%B3%20Panorama%20Ballroom&details=%E8%AA%A0%E6%91%AF%E9%82%80%E8%AB%8B%E6%82%A8%E5%8F%83%E8%88%87%E6%88%91%E5%80%91%E7%9A%84%E5%A9%9A%E7%A6%AE%EF%BC%8C%E4%B8%80%E5%90%8C%E8%A6%8B%E8%AD%89%E9%80%99%E5%80%8B%E9%87%8D%E8%A6%81%E7%9A%84%E6%97%A5%E5%AD%90%E3%80%82%0A%0A11%3A00-12%3A00%20%E8%BF%8E%E8%B3%93%E9%85%92%E6%9C%83%0A12%3A00%20%E5%85%A5%E5%B8%AD%E3%83%BB12%3A30%20%E5%8D%88%E5%AE%B4%0A%0A%E5%9C%B0%E9%BB%9E%EF%BC%9A%E5%8F%B0%E5%8C%97%E8%90%AC%E8%B1%AA%E9%85%92%E5%BA%97%2036F%20%E5%AF%B0%E5%AE%87%E5%BB%B3%0A%E8%91%97%E8%A3%9D%EF%BC%9A%E9%BB%91%E3%83%BB%E7%99%BD%E3%83%BB%E5%A4%A7%E5%9C%B0%E8%89%B2%E7%B3%BB%0A%0A%E6%9C%9F%E5%BE%85%E8%88%87%E6%82%A8%E7%9B%B8%E8%A6%8B%20%E2%80%94%20Paul%20%26%20June" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Google 日曆
+        </a>
+      </div>
    </article>
    <article class="vcard" data-html-import-id="html-import-51" data-template-id="article-44" style="background: rgba(255, 255, 255, 0.7);">
     <div class="label canva-container" data-html-import-id="html-import-52" data-template-id="div-45" style="color: rgb(114, 122, 117); font-family: &quot;Cormorant Garamond&quot;; font-size: 15px;">Venue</div>
