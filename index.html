@@ -574,10 +574,7 @@ footer{padding:50px 22px;text-align:center;background:#e7e4df}
         <label for="attendanceCount">出席人數 GUESTS <span class="required">*</span></label>
         <select id="attendanceCount" name="guestCount" disabled>
           <option value="" selected disabled>請選擇</option>
-          <option value="1人">1人</option>
-          <option value="2人">2人</option>
-        </select>
-        <span class="hint">僅男方親友需要填寫出席人數，最多 2 人。</span>
+        <span class="hint" id="attendanceCountHint"></span>
       </div>
       
       <div class="field">
@@ -687,8 +684,24 @@ const submitBtn=document.getElementById("submitBtn");
 const successMessage=document.getElementById("successMessage");
 const iframe=document.getElementById("hiddenSubmitFrame");
 
+const attendanceCountHint=document.getElementById("attendanceCountHint");
+
 function syncGuestLogic(){
-  const show=relationship.value==="男方親友";
+  const rel=relationship.value;
+  const isGroom=rel==="男方親友";
+  const isBride=rel==="女方親友";
+  const show=isGroom||isBride;
+
+  attendanceCount.innerHTML='<option value="" selected disabled>請選擇</option>';
+  if(isGroom){
+    attendanceCount.insertAdjacentHTML("beforeend",'<option value="1人">1人</option><option value="2人">2人</option>');
+    attendanceCountHint.textContent="男方親友最多 2 人。";
+  }else if(isBride){
+    attendanceCount.insertAdjacentHTML("beforeend",'<option value="1人">1人</option>');
+    attendanceCountHint.textContent="女方親友出席人數為 1 人。";
+  }else{
+    attendanceCountHint.textContent="";
+  }
 
   if(show){
     attendanceCountWrap.classList.add("show");
